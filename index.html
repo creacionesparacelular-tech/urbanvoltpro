@@ -17,9 +17,7 @@
   --gold:#ffc400;
   --black:#070707;
   --dark:#111;
-  --dark2:#171717;
   --gray:#bcbcbc;
-  --white:#fff;
 }
 
 html{
@@ -81,7 +79,7 @@ header{
 }
 
 
-/* HERO */
+/* PORTADA */
 
 .hero{
   background:
@@ -92,11 +90,28 @@ header{
 .hero-inner{
   max-width:1200px;
   margin:auto;
-  padding:65px 20px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:35px;
-  align-items:center;
+  padding:55px 20px;
+}
+
+.hero-poster{
+  max-width:850px;
+  margin:0 auto 45px;
+  background:#111;
+  border:1px solid #333;
+  border-radius:20px;
+  padding:10px;
+}
+
+.hero-poster img{
+  width:100%;
+  display:block;
+  border-radius:13px;
+}
+
+.hero-text{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
 }
 
 .badge{
@@ -112,7 +127,7 @@ header{
 }
 
 .hero h1{
-  font-size:clamp(42px,7vw,76px);
+  font-size:clamp(40px,7vw,72px);
   line-height:1;
   margin-bottom:20px;
 }
@@ -123,14 +138,15 @@ header{
 
 .hero p{
   color:#d0d0d0;
-  max-width:680px;
+  max-width:720px;
   font-size:18px;
-  margin-bottom:27px;
+  margin:0 auto 27px;
 }
 
 .buttons{
   display:flex;
   flex-wrap:wrap;
+  justify-content:center;
   gap:10px;
 }
 
@@ -151,21 +167,6 @@ header{
   background:#171717;
   color:white;
   border:1px solid #444;
-}
-
-.hero-image{
-  background:#111;
-  border:1px solid #303030;
-  padding:10px;
-  border-radius:20px;
-}
-
-.hero-image img{
-  width:100%;
-  display:block;
-  border-radius:13px;
-  max-height:600px;
-  object-fit:contain;
 }
 
 
@@ -201,7 +202,7 @@ section{
 }
 
 
-/* SERVICES */
+/* SERVICIOS */
 
 .services{
   background:#0d0d0d;
@@ -226,7 +227,6 @@ section{
 }
 
 .card h3{
-  color:white;
   font-size:20px;
   margin-bottom:8px;
 }
@@ -246,7 +246,7 @@ section{
 }
 
 
-/* WORK */
+/* TRABAJOS */
 
 .work-grid{
   display:grid;
@@ -282,7 +282,7 @@ section{
 }
 
 
-/* TEAM */
+/* EQUIPO */
 
 .team{
   background:#0d0d0d;
@@ -320,7 +320,7 @@ section{
 }
 
 
-/* AI */
+/* IA */
 
 .ai-box{
   background:
@@ -348,7 +348,7 @@ section{
 }
 
 
-/* REVIEWS */
+/* RESEÑAS */
 
 .reviews{
   background:#0d0d0d;
@@ -397,7 +397,7 @@ section{
 }
 
 
-/* CONTACT */
+/* CONTACTO */
 
 .contact{
   background:#0d0d0d;
@@ -460,12 +460,8 @@ footer strong{
   z-index:999;
 }
 
-
-/* MOBILE */
-
 @media(max-width:850px){
 
-  .hero-inner,
   .team-grid,
   .contact-box{
     grid-template-columns:1fr;
@@ -477,17 +473,16 @@ footer strong{
     grid-template-columns:1fr;
   }
 
-  .hero-inner{
-    padding:50px 17px;
-  }
-
   .work img{
     height:auto;
+  }
+
+  .hero-inner{
+    padding:35px 16px 55px;
   }
 }
 </style>
 </head>
-
 
 <body>
 
@@ -507,13 +502,17 @@ URBAN<span>VOLT</span> PRO ⚡
 </header>
 
 
-<!-- HERO -->
+<!-- PORTADA -->
 
 <section class="hero">
 
 <div class="hero-inner">
 
-<div>
+<div class="hero-poster">
+<img src="IMG_5673.jpeg" alt="UrbanVolt Pro Electrical Services NYC">
+</div>
+
+<div class="hero-text">
 
 <div class="badge"
 data-en="⚡ ELECTRICAL HELP & SERVICES • NYC"
@@ -551,18 +550,11 @@ target="_blank">
 </div>
 
 </div>
-
-
-<div class="hero-image">
-<img src="IMG_5649(2).jpeg" alt="UrbanVolt Pro Electrical Services">
 </div>
-
-</div>
-
 </section>
 
 
-<!-- SERVICES -->
+<!-- SERVICIOS -->
 
 <section class="services">
 
@@ -630,9 +622,9 @@ Outlets, switches, GFCI devices and electrical connections.
 
 <div class="card">
 <div class="icon">🧰</div>
-<h3 data-en="Breakers & Panels"
-data-es="Breakers y Paneles">
-Breakers & Panels
+<h3 data-en="Breakers, Panels & Subpanels"
+data-es="Breakers, Paneles y Subpaneles">
+Breakers, Panels & Subpanels
 </h3>
 <p data-en="Breaker replacement, panels, subpanels and dedicated circuits."
 data-es="Cambio de breakers, paneles, subpaneles y circuitos dedicados.">
@@ -648,7 +640,7 @@ data-es="Ventiladores de Techo">
 Ceiling Fans
 </h3>
 <p data-en="Ceiling fan installation, replacement and electrical connections."
-data-es="Instalación y reemplazo de ventiladores de techo y sus conexiones eléctricas.">
+data-es="Instalación y reemplazo de ventiladores de techo y conexiones eléctricas.">
 Ceiling fan installation, replacement and electrical connections.
 </p>
 </div>
@@ -706,13 +698,11 @@ Pool lighting, pumps, controls, timers and electrical equipment connections.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- REAL WORK -->
+<!-- TRABAJOS REALES -->
 
 <section>
 
@@ -731,110 +721,109 @@ Real electrical projects.
 </h2>
 
 <p class="description"
-data-en="A selection of electrical installations, diagnostics and projects completed by our team."
-data-es="Una selección de instalaciones, diagnósticos y proyectos eléctricos realizados por nuestro equipo.">
-A selection of electrical installations, diagnostics and projects completed by our team.
+data-en="Electrical installations, diagnostics and projects completed by our team."
+data-es="Instalaciones, diagnósticos y proyectos eléctricos realizados por nuestro equipo.">
+Electrical installations, diagnostics and projects completed by our team.
 </p>
 
 
 <div class="work-grid">
 
 <div class="work">
-<img src="IMG_5663.jpeg" alt="Smart security camera installation">
+<img src="IMG_5663.jpeg" alt="Smart security installation">
 <div class="work-info">
-<strong data-en="Smart Security" data-es="Seguridad Inteligente">
+<strong data-en="Smart Security"
+data-es="Seguridad Inteligente">
 Smart Security
 </strong>
-<p data-en="Exterior camera and lighting installation."
-data-es="Instalación de cámara e iluminación exterior.">
-Exterior camera and lighting installation.
+<p data-en="Camera and exterior electrical installation."
+data-es="Instalación de cámara y sistema eléctrico exterior.">
+Camera and exterior electrical installation.
 </p>
 </div>
 </div>
 
 
 <div class="work">
-<img src="IMG_5661(1).jpeg" alt="Lighting installation">
+<img src="IMG_5661.jpeg" alt="Lighting installation">
 <div class="work-info">
 <strong data-en="Lighting Installation"
 data-es="Instalación de Iluminación">
 Lighting Installation
 </strong>
-<p data-en="Decorative fixture and recessed lighting."
-data-es="Lámpara decorativa e iluminación empotrada.">
-Decorative fixture and recessed lighting.
+<p data-en="Decorative and recessed lighting."
+data-es="Iluminación decorativa y empotrada.">
+Decorative and recessed lighting.
 </p>
 </div>
 </div>
 
 
 <div class="work">
-<img src="IMG_5659(2).jpeg" alt="Electrician installing light">
+<img src="IMG_5659.jpeg" alt="Electrical installation">
 <div class="work-info">
 <strong data-en="Electrical Installation"
 data-es="Instalación Eléctrica">
 Electrical Installation
 </strong>
-<p data-en="Hands-on electrical installation work."
-data-es="Trabajo práctico de instalación eléctrica.">
-Hands-on electrical installation work.
+<p data-en="Hands-on electrical installation."
+data-es="Trabajo de instalación eléctrica.">
+Hands-on electrical installation.
 </p>
 </div>
 </div>
 
 
 <div class="work">
-<img src="IMG_5533(1).jpeg" alt="Electrical testing">
+<img src="IMG_5533.jpeg" alt="Electrical diagnostics">
 <div class="work-info">
 <strong data-en="Electrical Diagnostics"
 data-es="Diagnóstico Eléctrico">
 Electrical Diagnostics
 </strong>
-<p data-en="Electrical testing with professional measuring equipment."
-data-es="Pruebas eléctricas con equipos profesionales de medición.">
-Electrical testing with professional measuring equipment.
+<p data-en="Electrical testing and voltage verification."
+data-es="Pruebas eléctricas y verificación de voltaje.">
+Electrical testing and voltage verification.
 </p>
 </div>
 </div>
 
 
 <div class="work">
-<img src="IMG_5535(1).jpeg" alt="Appliance electrical connection">
+<img src="IMG_5535.jpeg" alt="Dedicated electrical circuit">
 <div class="work-info">
-<strong data-en="Appliance Connections"
-data-es="Conexiones de Equipos">
-Appliance Connections
+<strong data-en="Dedicated Circuits"
+data-es="Circuitos Dedicados">
+Dedicated Circuits
 </strong>
-<p data-en="Dedicated electrical connection for appliances."
-data-es="Conexión eléctrica dedicada para equipos.">
-Dedicated electrical connection for appliances.
+<p data-en="Electrical connection for appliances and equipment."
+data-es="Conexión eléctrica para electrodomésticos y equipos.">
+Electrical connection for appliances and equipment.
 </p>
 </div>
 </div>
 
 
 <div class="work">
-<img src="IMG_5660(1).jpeg" alt="Electrical conduit installation">
+<img src="IMG_5660.jpeg" alt="Electrical conduit installation">
 <div class="work-info">
-<strong data-en="Electrical Installation"
-data-es="Instalación Eléctrica">
-Electrical Installation
+<strong data-en="Conduit & Wiring"
+data-es="Tubería y Cableado">
+Conduit & Wiring
 </strong>
-<p data-en="Conduit and electrical wiring installation."
+<p data-en="Electrical conduit and wiring installation."
 data-es="Instalación de tubería y cableado eléctrico.">
-Conduit and electrical wiring installation.
+Electrical conduit and wiring installation.
 </p>
 </div>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- TEAM -->
+<!-- EQUIPO -->
 
 <section class="team">
 
@@ -856,7 +845,7 @@ Experience behind every project.
 <div class="team-grid">
 
 <div class="team-photo">
-<img src="IMG_5652(1).jpeg" alt="UrbanVolt Pro electrical technician">
+<img src="IMG_5652.jpeg" alt="UrbanVolt Pro team">
 </div>
 
 <div class="team-text">
@@ -879,15 +868,12 @@ Our team focuses on electrical troubleshooting, residential and commercial insta
 </p>
 
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 
-<!-- AI -->
+<!-- INTELIGENCIA ARTIFICIAL -->
 
 <section>
 
@@ -916,7 +902,7 @@ data-es="🤖 Inteligencia Artificial y Apoyo para Proyectos">
 <p
 data-en="UrbanVolt Pro combines hands-on electrical experience with modern technology and artificial intelligence tools to support planning, calculations, technical research, documentation and project organization. This helps our team work more efficiently while following applicable electrical codes and safety requirements."
 data-es="UrbanVolt Pro combina la experiencia práctica en electricidad con tecnología moderna y herramientas de inteligencia artificial para apoyar la planificación, cálculos, investigación técnica, documentación y organización de proyectos. Esto ayuda a nuestro equipo a trabajar de manera más eficiente mientras sigue los códigos eléctricos y requisitos de seguridad aplicables.">
-UrbanVolt Pro combines hands-on electrical experience with modern technology and artificial intelligence tools to support planning, calculations, technical research, documentation and project organization. This helps our team work more efficiently while following applicable electrical codes and safety requirements.
+UrbanVolt Pro combines hands-on electrical experience with modern technology and artificial intelligence tools to support planning, calculations, technical research, documentation and project organization.
 </p>
 
 <div class="ai-credit">
@@ -924,13 +910,11 @@ AI tools powered by OpenAI technology.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- REVIEWS -->
+<!-- RESEÑAS -->
 
 <section class="reviews">
 
@@ -947,7 +931,6 @@ data-en="What customers say."
 data-es="Lo que dicen nuestros clientes.">
 What customers say.
 </h2>
-
 
 <div class="review-grid">
 
@@ -973,9 +956,7 @@ What customers say.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1005,11 +986,10 @@ Electrical help throughout NYC.
 </div>
 
 </div>
-
 </section>
 
 
-<!-- CONTACT -->
+<!-- CONTACTO -->
 
 <section class="contact">
 
@@ -1033,7 +1013,6 @@ Contact UrbanVolt Pro for your next electrical project.
 
 </div>
 
-
 <div class="contact-links">
 
 <a href="tel:+19296387058">
@@ -1051,9 +1030,7 @@ Contact UrbanVolt Pro for your next electrical project.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
@@ -1071,7 +1048,6 @@ aria-label="WhatsApp">
 
 
 <script>
-
 function language(lang){
 
 document.querySelectorAll("[data-en]").forEach(function(element){
@@ -1093,7 +1069,6 @@ document.getElementById("esBtn")
 document.documentElement.lang=lang;
 
 }
-
 </script>
 
 </body>
